@@ -2,13 +2,32 @@
   width: 155px;
   height: 155px;
   background-color: #f25a70;
-  border-radius: 15px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
 }
 
+.memory-card.-open{
+  background-color: #ffffff;
+}
+
+.memory-card .bg-center{
+  background-color: #d4d4d4;
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memory-card .bg-center > .icon{
+  width: 100px;
+}
+
 .memory-card > .icon{
   width: 100px;
 }
+
