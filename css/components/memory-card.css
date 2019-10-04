@@ -1,40 +1,36 @@
-@media (max-width: 360px){
-
-  .memory-card{
-    width: 135px;
-    height: 100px;
-    background-color: #f25a70;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-    position: relative;
-    margin: 5px auto;
-  }
-  
-  .memory-card.-front{
-    background-color: #ffffff;
-  }
-  
-  .memory-card.-front::before{
-    content: '';
-    background-color: #d4d4d4;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-  }
-  
-  .memory-card > .icon{
-    width: 60px;
-    height: 60px;
-  }
-  
-  .memory-card.-front > .icon{
-    width: 60px;
-    transform: translateY(-10px);
-  }
+.memory-card{
+  width: 155px;
+  height: 155px;
+  background-color: #f25a70;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  position: relative;
+  margin: 5px auto;
 }
 
+.memory-card.-front{
+  background-color: #ffffff;
+}
+
+.memory-card.-front::before{
+  content: '';
+  background-color: #d4d4d4;
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.memory-card > .icon{
+  width: 100px;
+  height: 100px;
+}
+
+.memory-card.-front > .icon{
+  width: 100px;
+  transform: translateY(-10px);
+}
 
