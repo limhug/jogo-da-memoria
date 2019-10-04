@@ -6,6 +6,7 @@ function memoryCardClose() {
   $memoryCard.insertAdjacentHTML("afterbegin", $iconGueio);
   $wrapCards.insertBefore($memoryCard, null);
 
+  $memoryCard.addEventListener("click", () => console.log("clicou!!!"));
 }
 
 function $memoryCardOpen() {
@@ -17,5 +18,5 @@ function $memoryCardOpen() {
   $memoryCardFront.insertAdjacentHTML("afterbegin", $iconCPlusPlus);
   $wrapCards.insertBefore($memoryCardFront, null);
   
-
+  $memoryCardFront.addEventListener("click", () => console.log("clicou no front!!!"));
 }
