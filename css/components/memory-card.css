@@ -9,6 +9,7 @@
   box-shadow: 0 3px 6px rgba(0,0,0,0.16);
   position: relative;
   margin: 5px auto;
+  cursor: pointer;
 }
 
 .memory-card.-front{
