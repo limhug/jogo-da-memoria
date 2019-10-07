@@ -10,7 +10,7 @@ function createCardsWrapper(){
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      padding-top: 10px;
+      padding-top: 15px;
     }
   `
 

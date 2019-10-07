@@ -6,22 +6,39 @@ function memoryCard (){
     .memory-card{
       width: 155px;
       height: 155px;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .memory-card .card{
+      width: 100%;
+      height: 100%;
       background-color: #f25a70;
       border-radius: 10px;
-      display: flex;
+      display:flex;
       justify-content: center;
       align-items: center;
       box-shadow: 0 3px 6px rgba(0,0,0,0.16);
       position: relative;
-      margin: 5px auto;
       cursor: pointer;
+      position: absolute;
     }
 
-    .memory-card.-front{
+    
+    .memory-card .card.-front{
       background-color: #ffffff;
+      display: none;
+    }
+    
+    .memory-card.-active .card{
+      display: none;
     }
 
-    .memory-card.-front::before{
+    .memory-card.-active .card.-front{
+      display: flex;
+    }
+
+    .memory-card .card.-front::before{
       content: '';
       background-color: #d4d4d4;
       width: 94px;
@@ -30,12 +47,12 @@ function memoryCard (){
       position: absolute;
     }
 
-    .memory-card > .icon{
+    .memory-card .card > .icon{
       width: 100px;
       height: 100px;
     }
 
-    .memory-card.-front > .icon{
+    .memory-card .card.-front > .icon{
       width: 100px;
       transform: translateY(-10px);
     }
@@ -44,16 +61,24 @@ function memoryCard (){
   $head.insertBefore($style, null)
 
   return ({ nameClass, src, alt }) => `
-    <article class="memory-card ${nameClass}">
-      <img 
-        class="icon"
-        src="${src}"
-        alt="${alt}"
-        onclick="handleClick()"
-      />
-    </article>  
+    <div class="memory-card" onclick="handleClick(this)">
+      <article class="card ${nameClass}">
+        <img 
+          class="icon"
+          src="${src}"
+          alt="${alt}"
+        />
+      </article>
+      <article class="card">
+        <img 
+          class="icon"
+          src="/images/icon-collabcode.svg"
+          alt="Gueio - Mascote da Collabcode"
+        />
+      </article>
+    </div>  
   `;
 }
 
 
-const handleClick = () => console.log("Deu certo!")
+const handleClick = ($card) => $card.classList.toggle("-active")
